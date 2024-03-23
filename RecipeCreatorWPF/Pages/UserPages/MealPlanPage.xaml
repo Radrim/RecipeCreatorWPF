@@ -1,0 +1,55 @@
+﻿<Page x:Class="RecipeCreatorWPF.Pages.UserPages.MealPlanPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RecipeCreatorWPF.Pages.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="542" d:DesignWidth="1280"
+      Title="MealPlanPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Расчет калорий" Style="{StaticResource HeaderTextBlock}"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Label Content="Рост" Margin="0,0,0,5"></Label>
+            <TextBox x:Name="tbHeight"></TextBox>
+            <Label Content="Вес" Margin="0,0,0,5"></Label>
+            <TextBox x:Name="tbWeight"></TextBox>
+            <Label Content="Возраст" Margin="0,0,0,5"></Label>
+            <TextBox x:Name="tbAge"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Vertical">
+            <Label Content="Пол" Margin="0,0,0,5"></Label>
+            <ComboBox Name="cbGender">
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="tbResult" TextWrapping="Wrap" Margin="0,5,0,0"></TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="btnBack" Content="Назад" Margin="0,0,30,0" Click="btnBack_Click"></Button>
+            <Button x:Name="btnCalc" Content="Рассчитать" Click="btnCalc_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

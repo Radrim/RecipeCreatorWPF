@@ -1,0 +1,53 @@
+﻿<Page x:Class="RecipeCreatorWPF.Pages.AdminPages.AddIngredientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RecipeCreatorWPF.Pages.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="542" d:DesignWidth="1280"
+      Title="AddIngredientPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="20 0">
+            <Label Content="Введите название" Margin="0,0,0,5"></Label>
+            <TextBox x:Name="tbName" MaxLength="50" ></TextBox>
+
+            <Label Content="Единица измерения" Margin="0,5,0,5"></Label>
+            <ComboBox Name="cbFoodUnit">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Title}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Top">
+            <Button x:Name="btnTakeImage" Content="Выбрать изображение" Margin="0,25,0,0" FontSize="20" Click="btnTakeImage_Click"></Button>
+            <Image x:Name="imgIngredient" Width="200" Height="200" Margin="10" Stretch="Fill"></Image>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="btnBack" Content="Назад" Click="btnBack_Click" Margin="0 0 30 0"></Button>
+            <Button x:Name="btnAddIngredient" Content="Добавить" Click="btnAddIngredient_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

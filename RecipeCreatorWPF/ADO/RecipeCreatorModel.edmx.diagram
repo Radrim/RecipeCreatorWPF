@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="041f84577a5c48f0a13b9492ec6e228e" Name="Diagram1">
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.Account" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.FoodType" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.FoodUnit" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.Ingredient" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.Recipe" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.Recipe_Ingredient" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.Role" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RecipeCreatorBDModel.User" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="RecipeCreatorBDModel.FK_Account_User" ManuallyRouted="false" />
+        <AssociationConnector Association="RecipeCreatorBDModel.FK_Recipe_FoodType" ManuallyRouted="false" />
+        <AssociationConnector Association="RecipeCreatorBDModel.FK_Ingredient_FoodUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="RecipeCreatorBDModel.FK_Recipe_Ingredient_Ingredient" ManuallyRouted="false" />
+        <AssociationConnector Association="RecipeCreatorBDModel.FK_Recipe_Ingredient_Recipe" ManuallyRouted="false" />
+        <AssociationConnector Association="RecipeCreatorBDModel.FK_Recipe_User" ManuallyRouted="false" />
+        <AssociationConnector Association="RecipeCreatorBDModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

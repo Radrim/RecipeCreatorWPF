@@ -1,0 +1,26 @@
+﻿<Page x:Class="RecipeCreatorWPF.Pages.CommonPages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RecipeCreatorWPF.Pages.CommonPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="542" d:DesignWidth="1280"
+      Title="AuthPage">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Margin="0,0,0,5" Content="Введите логин" FontSize="24"></Label>
+            <TextBox x:Name="tbLogin" FontSize="24"></TextBox>
+
+            <Label Margin="0,15,0,5" Content="Введите пароль" FontSize="24"></Label>
+            <PasswordBox x:Name="pbPassword" FontSize="24"></PasswordBox>
+
+            <Button x:Name="btnAuth" Margin="0,20,0,0" FontSize="24" 
+            Content="Авторизоваться" Click="btnAuth_Click">
+            </Button>
+            <Button x:Name="btnGoToRegistrationPage" Margin="0,10,0,10" FontSize="24" 
+            Content="Нет аккаунта?" Click="btnGoToRegistrationPage_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
