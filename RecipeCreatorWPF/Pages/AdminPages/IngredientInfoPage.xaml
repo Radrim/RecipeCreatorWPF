@@ -8,6 +8,7 @@
       d:DesignHeight="542" d:DesignWidth="1280"
       Title="IngredientInfoPage">
 
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
